@@ -1,12 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Личный сайт Легина Даниила - программиста и студента магистратуры МГТУ им. Н. Э. Баумана.">
+    <title>Портфолио Легин Даниила</title>
     <link rel="stylesheet" href="css/outlines.css">
 </head>
 <body>
-    
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Личный сайт Легина Даниила - программиста и студента магистратуры МГТУ им. Н. Э. Баумана. Здесь вы найдете информацию обо мне, мои навыки, интересы и контакты.">
+    <title>Личный сайт Легина Даниила</title>
+</head>
+<body>
+    <div class="Container">
+        <header class="main-header">
+            <div class="main-logo">
+                <img src="img/main-logo.svg" alt="Александр Сухенко" width="60" height="60">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="main-nav__item"><a href="#about">Обо мне</a></li>
+                    <li class="main-nav__item"><a href="#skills">Навыки</a></li>
+                    <li class="main-nav__item"><a href="#interests">Интересы</a></li>
+                    <li class="main-nav__item"><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="section-intro">
+            <div class="intro-content">
+                <div class="intro-title">
+                    <h1>Легин Даниил</h1>
+                    <p>Программист</p>
+                </div>
+                <div class="intro-photo">
+                    <img src="img/my_photo.jpg" alt="Легин Даниил" width="160" height="160">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-about" id="about">
+            <h2 class="about-title">Пара слов обо мне</h2>
+            <div class="about-text">
+                <p>Привет 👋</p>
+                <p>В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана по направлению «Информатика и
+                    вычислительная техника».</p>
+                <p>В прошлом году защитил диплом бакалавра на тему «Разработка web-сайта для компании TEDONSTORE».</p>
+                <p>Также я уже успел поработать инженером в одном провайдере в Пушкино, но в будущем планирую стать
+                    разработчиком сложных программных комплексов и систем.</p>
+            </div>
+        </section>
+
+        <section class="section-skills" id="skills">
+            <div class="skills-header">
+                <h2 class="skills-title">Мои навыки</h2>
+                <div class="skills-sort">
+                    <span>Сортировать</span>
+                    <button type="button">по названию</button>
+                    <button type="button">по уровню</button>
+                </div>
+            </div>
+
+            <dl class="skills-list">
+                <dt>
+                    <img src="img/html.svg" alt="HTML" class="skill-icon"> HTML
+                </dt>
+                <dd>
+                    <div class="skill-fill" style="width: 33%;">33%</div>
+                </dd>
+
+                <dt>
+                    <img src="img/css.svg" alt="CSS" class="skill-icon"> CSS
+                </dt>
+                <dd>
+                    <div class="skill-fill" style="width: 13%;">13%</div>
+                </dd>
+
+                <dt>
+                    <img src="img/python.svg" alt="Python" class="skill-icon"> Python
+                </dt>
+                <dd>
+                    <div class="skill-fill" style="width: 53%;">53%</div>
+                </dd>
+
+                <dt>
+                    <img src="img/cpp.svg" alt="C++" class="skill-icon"> C++
+                </dt>
+                <dd>
+                    <div class="skill-fill" style="width: 73%;">73%</div>
+                </dd>
+            </dl>
+        </section>
+
+        <section class="section-interests" id="interests">
+            <h2 class="interests-title">Мои интересы</h2>
+            <div class="interests-text">
+                <p>Наибольший интерес для меня в данный момент представляет разработка десктопных приложений на C++, а также работа с памятью.</p>
+                <p>Но помимо учёбы и работы я также люблю рисовать и читать стихотворения.</p>
+            </div>
+        </section>
+
+        <section class="section-contacts" id="contacts">
+            <h2 class="contacts-title">Мои контакты</h2>
+            <div class="contacts-list">
+                <p>
+                    <!-- <img src="img/ContactsIcon.svg" alt="Телефон" class="contact-icon"> -->
+                    <a href="tel:+79161131313">+7 916 113 13 13</a>
+                </p>
+                <p>
+                    <!-- <img src="img/MailIcon.svg" alt="Почта" class="contact-icon"> -->
+                    <a href="mailto:p01yak@vk.com">p01yak@vk.com</a>
+                </p>
+                <ul class="social">
+                    <li><a href="#"><img src="img/Github.svg" alt="GitHub"></a></li>
+                    <li><a href="#"><img src="img/Gitlab.svg" alt="GitLab"></a></li>
+                    <li><a href="#"><img src="img/Telegram.svg" alt="Telegram"></a></li>
+                    <li><a href="#"><img src="img/Instagram.svg" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="img/Vk.svg" alt="VK"></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Легин Даниил</p>
+        </footer>
 </body>
 </html>
