@@ -159,6 +159,10 @@ footer {
 	width: 114px;
 }
 
+.intro-photo img {
+	border-radius: 50%;
+}
+
 .social {
 	margin: 0;
 	padding: 0;
