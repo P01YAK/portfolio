@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Личный сайт Легина Даниила - программиста и студента магистратуры МГТУ им. Н. Э. Баумана. Здесь вы найдете информацию обо мне, мои навыки, интересы и контакты.">
+    <meta name="description"
+        content="Личный сайт Легина Даниила - программиста и студента магистратуры МГТУ им. Н. Э. Баумана. Здесь вы найдете информацию обо мне, мои навыки, интересы и контакты.">
     <title>Личный сайт Легина Даниила</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div>
+    <div class="container">
         <header class="main-header">
             <div class="main-logo">
-                <img src="img/main-logo.svg" alt="Александр Сухенко" width="60" height="60">
+                <img src="img/main-logo.svg" alt="Легин Даниил" width="60" height="60">
             </div>
             <nav class="main-nav">
                 <ul>
@@ -28,7 +36,7 @@
             <div class="intro-content">
                 <div class="intro-title">
                     <h1>Легин Даниил</h1>
-                    <p>Программист</p>
+                    <p class="subtitle">Программист</p>
                 </div>
                 <div class="intro-photo">
                     <img src="img/my_photo.jpg" alt="Легин Даниил" width="160" height="160">
@@ -50,41 +58,40 @@
 
         <section class="section-skills" id="skills">
             <div class="skills-header">
-                <h2 class="skills-title">Мои навыки</h2>
+                <h2>Мои навыки</h2>
                 <div class="skills-sort">
-                    <span>Сортировать</span>
+                    <span>Сортировать:</span>
                     <button type="button">по названию</button>
                     <button type="button">по уровню</button>
                 </div>
             </div>
-
             <dl class="skills-list">
-                <dt>
-                    HTML
+                <dt class="skill-item skill-item_html">
+                    <span class="visually-hidden">HTML</span>HTML
                 </dt>
                 <dd>
-                    <div class="skill-fill" style="width: 33%;">33%</div>
+                    <div class="skill-fill" style="width: 60%;">60%</div>
                 </dd>
 
-                <dt>
-                    CSS
+                <dt class="skill-item skill-item_css">
+                    <span class="visually-hidden">CSS</span>CSS
                 </dt>
                 <dd>
-                    <div class="skill-fill" style="width: 13%;">13%</div>
+                    <div class="skill-fill" style="width: 70%;">70%</div>
                 </dd>
 
-                <dt>
-                    Python
+                <dt class="skill-item skill-item_python">
+                    <span class="visually-hidden">Python</span>Python
                 </dt>
                 <dd>
-                    <div class="skill-fill" style="width: 53%;">53%</div>
+                    <div class="skill-fill" style="width: 80%;">80%</div>
                 </dd>
 
-                <dt>
-                    C++
+                <dt class="skill-item skill-item_cpp">
+                    <span class="visually-hidden">C++</span>C++
                 </dt>
                 <dd>
-                    <div class="skill-fill" style="width: 73%;">73%</div>
+                    <div class="skill-fill" style="width: 55%;">55%</div>
                 </dd>
             </dl>
         </section>
@@ -92,31 +99,41 @@
         <section class="section-interests" id="interests">
             <h2 class="interests-title">Мои интересы</h2>
             <div class="interests-text">
-                <p>Наибольший интерес для меня в данный момент представляет разработка десктопных приложений на C++, а также работа с памятью.</p>
+                <p>Наибольший интерес для меня в данный момент представляет разработка десктопных приложений на C++, а
+                    также работа с памятью.</p>
                 <p>Но помимо учёбы и работы я также люблю рисовать и читать стихотворения.</p>
             </div>
         </section>
 
         <section class="section-contacts" id="contacts">
             <h2 class="contacts-title">Мои контакты</h2>
-            <div class="contacts-list">
-                <ul class="contacts">
-                    <li><a href="tel:+79161131313">+7 916 113 13 13</a></li>
-                    <li><a href="mailto:p01yak@vk.com">p01yak@vk.com</a></li>
-                </ul>
-                <ul class="social">
-                    <li><a href="#">GitHub</a></li>
-                    <li><a href="#">GitLab</a></li>
-                    <li><a href="#">Тележка</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">VK</a></li>
-                </ul>
-            </div>
+            <ul class="contact-list">
+                <li>
+                    <a href="tel:+79778724795" class="contact-link contact-link_phone">
+                        <span class="visually-hidden">Телефон</span>+7 977 872-47-95
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:suhaldos@gmail.com" class="contact-link contact-link_mail">
+                        <span class="visually-hidden">Почта</span>suhaldos@gmail.com
+                    </a>
+                </li>
+            </ul>
+            <ul class="social">
+                <li><a href="#" class='social-link github'><span class="visually-hidden">GitHub</span></a></li>
+                <li><a href="#" class='social-link gitlab'><span class="visually-hidden">GitLab</span></a></li>
+                <li><a href="#" class='social-link telegram'><span class="visually-hidden">Тележка</span></a></li>
+                <li><a href="#" class='social-link instagram'><span class="visually-hidden">Instagram</span></a>
+                </li>
+                <li><a href="#" class='social-link vk'><span class="visually-hidden">VK</span></a></li>
+            </ul>
         </section>
-
-        <footer>
-            <p>© 2025 Легин Даниил</p>
-        </footer>
     </div>
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 Легин Даниил</p>
+        </div>
+    </footer>
 </body>
+
 </html>
