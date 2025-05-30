@@ -62,7 +62,7 @@ button {
 	line-height: 100%;
 	letter-spacing: 0;
 	text-align: center;
-	background: #fff;
+	background: var(--bg-color);
 	cursor: pointer;
 	box-sizing: border-box;
 	text-transform: lowercase;
@@ -84,7 +84,7 @@ a {
 	font-size: 38px;
 	font-weight: 400;
 	line-height: 1.2;
-	color: #205b75;
+	color: var(--blue);
 }
 
 footer {
@@ -219,23 +219,23 @@ footer {
 }
 
 .github {
-	background-image: url(/img/GitHub.svg);
+	background-image: url(../img/GitHub.svg);
 }
 
 .gitlab {
-	background-image: url(/img/GitLab.svg);
+	background-image: url(../img/GitLab.svg);
 }
 
 .telegram {
-	background-image: url(/img/Telegram.svg);
+	background-image: url(../img/Telegram.svg);
 }
 
 .instagram {
-	background-image: url(/img/Instagram.svg);
+	background-image: url(../img/Instagram.svg);
 }
 
 .vk {
-	background-image: url(/img/VK.svg);
+	background-image: url(../img/VK.svg);
 }
 
 .contact {
@@ -253,7 +253,7 @@ footer {
 .contact-link {
 	display: inline-block;
 	height: 40px;
-	line-height: 40px;
+	line-height: 2;
 	padding-left: 42px;
 	padding-right: 14px;
 	color: var(--txt-color);
@@ -289,20 +289,38 @@ li {
 	list-style: none;
 }
 
-.skills-list {
+.skill-list {
 	margin: 0;
 	padding: 0;
-	line-height: 1.2;
+	line-height: 1;
 }
-.skills-list dt {
+
+.skill-list dt {
 	margin-bottom: 6px;
 	padding: 5px 0 5px 38px;
 	background-position: left;
 	background-repeat: no-repeat;
 	background-size: 30px;
-	font-weight: 400;
-	position: relative;
 }
+
+.skill-level {
+	margin: 4px 0 20px;
+	padding: 2px;
+	font-size: 0;
+	border: 1px solid var(--blue);
+	border-radius: 16px;
+}
+
+.skill-level div {
+	height: 14px;
+	background-color: var(--yellow);
+	border-radius: 8px;
+}
+
+.skill-item {
+	text-transform: lowercase;
+}
+
 .skill-item_html {
 	background-image: url('../img/html.svg');
 }
@@ -319,27 +337,6 @@ li {
 	background-image: url('../img/python.svg');
 }
 
-.skills-list dd {
-	margin: 0 0 12px 0;
-	padding: 0;
-}
-.skill-fill {
-	background: var(--yellow);
-	height: 16px;
-	border-radius: 8px;
-	width: 60%;
-	color: var(--txt-color);
-	text-align: left;
-	padding-left: 8px;
-	line-height: 16px;
-}
-
 dd {
-	background: #fff;
-	border: 1px solid var(--blue);
-	border-radius: 8px;
-	height: 16px;
 	margin: 0 0 20px 0;
-	overflow: hidden;
-	position: relative;
 }
