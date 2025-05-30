@@ -319,6 +319,7 @@ li {
 
 .skill-item {
 	text-transform: lowercase;
+	background-repeat: no-repeat;
 }
 
 .skill-item_html {
