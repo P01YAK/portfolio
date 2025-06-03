@@ -87,14 +87,15 @@ a {
 	color: var(--blue);
 }
 
-footer {
+.main-footer {
 	color: var(--bg-color);
 	background-color: var(--blue);
-	height: 130px;
+	min-height: 130px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 1.5;
+	padding: 20px 0;
 }
 
 .container {
@@ -117,7 +118,7 @@ footer {
 	padding: 0 20px;
 }
 
-.main-header .main-nav a {
+.main-nav a {
 	display: inline-block;
 	text-decoration: none;
 	color: var(--txt-color);
@@ -126,13 +127,10 @@ footer {
 	transition: color 0.3s ease;
 }
 
-.main-header .main-nav a:hover {
-	display: inline-block;
+.main-nav a:hover {
 	text-decoration: none;
 	color: var(--blue);
-	padding: 10px 15px;
-	font-size: 20px;
-	transition: 0.3s ease;
+	transition: color 0.3s ease;
 }
 
 .main-header {
@@ -155,8 +153,7 @@ footer {
 }
 
 .main-nav__item {
-	height: 40px;
-	width: 114px;
+	display: inline-block;
 }
 
 .intro-photo img {
@@ -172,7 +169,7 @@ footer {
 
 .interests-text {
 	max-width: 800px;
-	margin-bottom: 120px;
+	margin-bottom: 80px;
 }
 
 .section-skills {
