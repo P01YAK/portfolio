@@ -169,7 +169,6 @@ a {
 
 .interests-text {
 	max-width: 800px;
-	margin-bottom: 80px;
 }
 
 .section-skills {
@@ -216,23 +215,23 @@ a {
 }
 
 .github {
-	background-image: url('../img/GitHub.svg');
+	background-image: url('../img/github.svg');
 }
 
 .gitlab {
-	background-image: url('../img/GitLab.svg');
+	background-image: url('../img/gitlab.svg');
 }
 
 .telegram {
-	background-image: url('../img/Telegram.svg');
+	background-image: url('../img/telegram.svg');
 }
 
 .instagram {
-	background-image: url('../img/Instagram.svg');
+	background-image: url('../img/instagram.svg');
 }
 
 .vk {
-	background-image: url('../img/VK.svg');
+	background-image: url('../img/vk.svg');
 }
 
 .contact {
@@ -335,6 +334,6 @@ li {
 	background-image: url('../img/python.svg');
 }
 
-dd {
+.skill-list dd {
 	margin: 0 0 20px 0;
 }
