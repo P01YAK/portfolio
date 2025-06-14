@@ -119,7 +119,7 @@ a {
 }
 
 .main-nav a {
-	display: inline-block;
+	/* display: inline-block; */
 	text-decoration: none;
 	color: var(--txt-color);
 	padding: 10px 15px;
@@ -128,7 +128,6 @@ a {
 }
 
 .main-nav a:hover {
-	text-decoration: none;
 	color: var(--blue);
 	transition: color 0.3s ease;
 }
@@ -136,8 +135,8 @@ a {
 .main-header {
 	display: flex;
 	align-items: center;
-	gap: 32px;
-	padding: 20px 0;
+	gap: 40px;
+	padding-top: 60px;
 }
 
 .main-nav ul {
@@ -145,6 +144,62 @@ a {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+
+.section-intro {
+	margin-top: 120px;
+	margin-bottom: 120px;
+	min-height: 130px;
+	display: flex;
+	align-items: center;
+}
+
+.intro-content {
+	display: flex;
+	align-items: center;
+	min-height: 130px;
+	gap: 32px;
+}
+
+.intro-photo img {
+	border-radius: 50%;
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+}
+
+.intro-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.intro-title h1 {
+	margin: 0;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 1.1;
+}
+
+.subtitle {
+	margin: 0;
+	font-size: 22px;
+	color: var(--blue);
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+.intro-title {
+	margin-left: 71px;
+}
+
+.intro-title p {
+	font-size: 38px;
+}
+
+.intro-title h1 {
+	margin-bottom: 20px;
+	font-size: 60px;
 }
 
 .main-logo {
@@ -156,8 +211,29 @@ a {
 	display: inline-block;
 }
 
-.intro-photo img {
-	border-radius: 50%;
+.section-about {
+	margin-bottom: 120px;
+	min-height: 130px;
+}
+
+.about-title {
+	font-family: 'Montserrat', 'Arial', sans-serif;
+	font-size: 32px;
+	font-weight: 700;
+	margin-bottom: 24px;
+}
+
+.about-text {
+	max-width: 800px;
+	font-size: 20px;
+}
+
+.about-text p {
+	margin: 0 0 15px 0;
+}
+
+.about-text p:last-child {
+	margin-bottom: 0;
 }
 
 .social {
@@ -336,4 +412,48 @@ li {
 
 .skill-list dd {
 	margin: 0 0 20px 0;
+}
+
+.skills-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.skills-header h2 {
+	font-size: 32px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.skills-sort {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.section-interests {
+	margin-bottom: 120px;
+}
+
+.interests-title {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.interests-text {
+	max-width: 800px;
+}
+
+.contacts-title {
+	margin-bottom: 40px;
+}
+
+.contact-list {
+	margin-bottom: 40px;
+}
+
+.section-contacts {
+	margin-bottom: 120px;
 }
