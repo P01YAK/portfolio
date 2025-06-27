@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Личный сайт Легина Даниила - программиста и студента магистратуры МГТУ им. Н. Э. Баумана. Здесь вы найдете информацию обо мне, мои навыки, интересы и контакты.">
     <title>Личный сайт Легина Даниила</title>
@@ -21,7 +21,11 @@
         <header class="main-header">
             <div class="main-logo">
                 <img src="img/main-logo.svg" alt="Легин Даниил" width="60" height="60">
+                <button class="nav-btn nav-btn_close">
+                    <span class='visually-hidden'>Закрыть меню</span>
+                </button>
             </div>
+
             <nav class="main-nav">
                 <ul>
                     <li class="main-nav__item"><a href="#about">Автобиография</a></li>
@@ -62,8 +66,8 @@
                 <h2>Мои навыки</h2>
                 <div class="skills-sort">
                     <span>Сортировать:</span>
-                    <button type="button">по названию</button>
-                    <button type="button">по уровню</button>
+                    <button type="button" class='sortbyname'>по названию</button>
+                    <button type="button" class='lvl'>по уровню</button>
                 </div>
             </div>
             <dl class="skill-list">
@@ -126,6 +130,7 @@
                 <li><a href="#" class='social-link telegram'><span class="visually-hidden">Тележка</span></a></li>
                 <li><a href="#" class='social-link instagram'><span class="visually-hidden">Instagram</span></a>
                 </li>
+                <li><a href="#" class='social-link vk'><span class="visually-hidden">VK</span></a></li>
                 <li><a href="#" class='social-link vk'><span class="visually-hidden">VK</span></a></li>
             </ul>
         </section>
