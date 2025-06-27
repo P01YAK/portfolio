@@ -442,6 +442,7 @@ li {
 .interests-title {
 	font-size: 30px;
 	font-weight: 700;
+	margin-bottom: 40px;
 }
 
 .interests-text {
@@ -465,7 +466,8 @@ li {
 }
 
 .section-skills .lvl {
-	width: 94px;
+	width: 125px;
+	height: 36px;
 }
 
 @media screen and (max-width: 1024px) {
