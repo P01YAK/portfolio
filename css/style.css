@@ -394,21 +394,6 @@ li {
 	background-repeat: no-repeat;
 }
 
-.skill-item_html {
-	background-image: url('../img/html.svg');
-}
-
-.skill-item_css {
-	background-image: url('../img/css.svg');
-}
-
-.skill-item_cpp {
-	background-image: url('../img/cpp.svg');
-}
-
-.skill-item_python {
-	background-image: url('../img/python.svg');
-}
 
 .skill-list dd {
 	margin: 0 0 20px 0;
@@ -466,7 +451,7 @@ li {
 }
 
 .section-skills .lvl {
-	width: 125px;
+	width: 140px;
 	height: 36px;
 }
 
@@ -510,7 +495,7 @@ li {
 		font-weight: 400;
 	}
 	.section-skills .lvl {
-		width: 104px;
+		width: 120px;
 		height: 32px;
 		font-size: 16px;
 		font-weight: 400;
@@ -731,7 +716,7 @@ li {
 
 	.section-skills .lvl {
 		font-size: 14px;
-		width: 94px !important;
+		width: 110px !important;
 		height: 30px;
 	}
 
