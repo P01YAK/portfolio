@@ -37,7 +37,7 @@ const skills = {
 			dt.textContent = skill.name
 			progressBar.textContent = `${skill.level}%`
 			progressBar.style.width = `${skill.level}%`
-			dt.style.backgroundImage = `url('../img/${skill.icon}')`
+			dt.style.backgroundImage = `url('./img/${skill.icon}')`
 			
 			// элементы
 			skillLevel.appendChild(progressBar)
