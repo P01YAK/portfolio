@@ -1,3 +1,8 @@
+@media screen and (max-width: 650px) {
+	.main-nav_closed {
+		display: none;
+	}
+}
 :root {
 	--txt-color: #031923;
 	--yellow: #e5bb33;
