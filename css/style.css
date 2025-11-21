@@ -3,6 +3,7 @@
 		display: none;
 	}
 }
+
 :root {
 	--txt-color: #031923;
 	--yellow: #e5bb33;
@@ -31,6 +32,15 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+}
+
+.dark-theme {
+	--txt-color: #CCCCCC;
+	--bg-color: #031923;
+}
+
+.dark-theme .social-link {
+	background-color: #CCCCCC;
 }
 
 h1 {
@@ -120,6 +130,10 @@ a {
 	align-items: center;
 }
 
+.dark-theme .main-footer {
+	color: #CCCCCC;
+}
+
 .main-footer .container {
 	width: 100%;
 	/* padding: 0 20px; */
@@ -200,7 +214,8 @@ a {
 	margin-left: 71px;
 	position: relative;
 	top: -3px;
-	left: 1px; /* поднимет текст выше */
+	left: 1px;
+	/* поднимет текст выше */
 }
 
 .main-logo {
@@ -348,9 +363,18 @@ a {
 	background-image: url('../img/ContactsIcon.svg');
 }
 
+.dark-theme .contact-link_phone {
+	background-image: url('../img/dark-theme/icon_phone.svg');
+}
+
 .contact-link_mail {
 	background-image: url('../img/MailIcon.svg');
 }
+
+.dark-theme .contact-link_mail {
+	background-image: url('../img/dark-theme/icon_email.svg');
+}
+
 .contact-link:hover {
 	color: var(--blue);
 }
@@ -360,6 +384,7 @@ ol {
 	margin: 0;
 	padding: 0;
 }
+
 li {
 	margin: 0;
 	padding: 0;
@@ -464,6 +489,7 @@ li {
 	h1 {
 		font-size: 50px !important;
 	}
+
 	.intro-photo img {
 		width: 250px;
 		height: 250px;
@@ -473,32 +499,39 @@ li {
 		margin-left: -16px;
 		text-align: center;
 	}
+
 	.section-intro {
 		margin-top: 82px;
 		margin-bottom: 60px;
 		gap: 0px;
 		padding-right: -10px;
 	}
+
 	.intro-title {
 		padding-top: 5px;
 	}
+
 	.main-header {
 		padding-top: 30px;
 		gap: 24px;
 	}
+
 	.main-nav a {
 		font-size: 18px;
 		padding: 10px 8px;
 	}
+
 	.skills-header h2 {
 		font-size: 24px;
 		margin-right: 20px;
 	}
+
 	.section-skills .sortbyname,
 	.section-skills .lvl {
 		font-size: 16px;
 		font-weight: 400;
 	}
+
 	.section-skills .lvl {
 		width: 120px;
 		height: 32px;
@@ -508,33 +541,40 @@ li {
 		padding-left: 0;
 		padding-right: 0;
 	}
+
 	.skill-list dd {
 		margin-bottom: 12px;
 	}
+
 	.interests-title {
 		font-size: 18px;
 		margin-bottom: 18px;
 	}
+
 	.interests-text {
 		font-size: 15px;
 		line-height: 1.4;
 	}
+
 	.contacts-title {
 		font-size: 18px;
 		margin-bottom: 18px;
 	}
+
 	.contact-link {
 		font-size: 15px;
 		background-size: 28px 28px;
 		padding-left: 36px;
 		padding-right: 36px;
 	}
+
 	.main-footer {
 		font-size: 15px;
 		min-height: 90px;
 		height: auto;
 		padding: 16px 0;
 	}
+
 	.social-link {
 		width: 50px;
 		height: 50px;
@@ -543,89 +583,112 @@ li {
 		margin-top: 1px;
 		margin-right: -2px;
 	}
+
 	.social li {
 		margin: 0 6px;
 	}
+
 	.main-nav {
 		margin-top: 25px;
 	}
+
 	.main-logo {
 		margin-top: 30px;
 	}
+
 	.intro-title .subtitle {
 		font-size: 28px;
 		margin-top: 0;
 		margin-left: 65px;
 		text-align: left;
 	}
+
 	.intro-title h1 {
 		margin-top: -20px;
 		margin-bottom: 58px;
 		text-align: left;
 		margin-left: 65px;
 	}
+
 	.section-about h2 {
 		font-size: 24px;
 	}
+
 	.section-intro {
 		margin-bottom: 70px;
 	}
+
 	.about-text p {
 		font-size: 16px;
 		margin-bottom: 18px;
 		line-height: 1.4;
 	}
+
 	.about-title {
 		margin-bottom: 42px;
 	}
+
 	.section-about {
 		line-height: 1.3;
 		margin-bottom: 80px;
 	}
+
 	.section-skills {
 		margin-top: 48px;
 	}
+
 	.skills-sort span {
 		font-size: 16px;
 		font-weight: 400;
 		margin-right: -5px;
 	}
+
 	.section-skills {
 		margin-bottom: 80px;
 	}
+
 	.interests-title {
 		font-size: 24px;
 		margin-bottom: 40px;
 	}
+
 	.interests-text {
 		font-size: 16px;
 	}
+
 	.section-interests {
 		margin-bottom: 80px;
 	}
+
 	.contacts-title {
 		font-size: 24px;
 		margin-bottom: 42px;
 	}
+
 	.contact-link_phone,
 	.contact-link_mail {
 		background-size: 30px 30px;
 	}
+
 	.contact-link_phone {
 		position: relative;
 		top: 4px;
 		left: 8px;
 		background-position: -6px -4px;
 	}
+
 	.contact-list {
 		gap: 20px;
 	}
+
 	.section-contacts {
 		margin-bottom: 75px;
 	}
+
 	.main-footer {
 		height: 124px;
 	}
+
 	.main-footer .container {
 		padding-bottom: 10px;
 	}
@@ -648,21 +711,25 @@ li {
 		width: 40px;
 		height: 40px;
 	}
+
 	.main-header {
 		flex-direction: column;
 		align-items: stretch;
 		padding-top: 20px;
 		gap: 20px;
 	}
+
 	.main-nav ul {
 		flex-direction: column;
 		align-items: stretch;
 	}
+
 	.main-nav a {
 		padding: 14px 0;
 		text-align: center;
 		display: block;
 	}
+
 	.section-intro {
 		flex-direction: column;
 		align-items: center;
@@ -670,16 +737,19 @@ li {
 		margin-top: 40px;
 		margin-bottom: 40px;
 	}
+
 	.intro-content {
 		flex-direction: column;
 		align-items: center;
 		gap: 16px;
 	}
+
 	.intro-photo {
 		display: flex;
 		justify-content: center;
 		margin-bottom: 0;
 	}
+
 	.intro-photo img {
 		width: 150px;
 		height: 150px;
@@ -693,9 +763,11 @@ li {
 		padding-left: 0;
 		padding-right: 0;
 	}
+
 	.intro-title h1 {
 		margin-bottom: -8px;
 	}
+
 	.intro-title p {
 		margin-bottom: 50px;
 		font-size: 20px;
@@ -705,6 +777,7 @@ li {
 		font-size: 20px;
 		margin-bottom: 30px;
 	}
+
 	.about-text p {
 		font-size: 14px;
 	}
@@ -762,35 +835,43 @@ li {
 		padding: 0;
 		gap: 0;
 	}
+
 	.main-nav ul {
 		flex-direction: column;
 		align-items: stretch;
 		gap: 5px;
 	}
+
 	.main-nav a {
 		font-size: 14px;
 		padding: 14px 0;
 		text-align: center;
 		display: block;
 	}
+
 	.main-header {
 		padding-top: 5;
 		margin-bottom: 53px;
 	}
+
 	.main-nav {
 		margin-top: -8px;
 	}
+
 	.nav-btn {
 		display: block;
 		width: 30px;
 		height: 30px;
 	}
+
 	.nav-btn_close {
 		background-image: url(../img/close.svg);
 	}
+
 	.nav-btn_open {
 		background-image: url(../img/burger.svg);
 	}
+
 	.main-logo {
 		width: 100%;
 		display: flex;
@@ -798,6 +879,7 @@ li {
 		justify-content: space-between;
 		margin-top: -10px;
 	}
+
 	.skill-list dd {
 		margin-bottom: 8px;
 	}
@@ -812,9 +894,11 @@ li {
 		font-size: 16px;
 		line-height: 1.3;
 	}
+
 	.interests-text p {
 		margin-bottom: 10px;
 	}
+
 	.interests-text p:last-child {
 		margin-bottom: 0;
 		font-family: Open Sans;
@@ -834,25 +918,31 @@ li {
 		background-size: 30px 30px;
 		padding-top: 4px;
 	}
+
 	.contact-link_phone,
 	.contact-link_mail {
 		background-size: 30px 30px;
 	}
+
 	.contact-link_phone {
 		padding-right: 35px;
 	}
+
 	.contact-list {
 		margin-bottom: 10px;
 	}
+
 	.social-link {
 		width: 50px;
 		height: 50px;
 		padding: 10px;
 	}
+
 	.social {
 		margin-top: 10px;
 		margin-bottom: 20px;
 	}
+
 	.social li {
 		margin: 0 0px 0 10px;
 	}
@@ -860,6 +950,7 @@ li {
 	.section-contacts {
 		margin-bottom: 42px;
 	}
+
 	.main-footer {
 		height: 81px;
 		font-size: 14px;
@@ -874,14 +965,17 @@ li {
 	h1 {
 		font-size: 32px !important;
 	}
+
 	.skills-header {
 		flex-direction: column;
 		align-items: flex-start;
 	}
+
 	.skills-header h2 {
 		white-space: nowrap;
 		margin-bottom: 16px;
 	}
+
 	.skills-sort {
 		width: 100%;
 		flex-direction: column;
@@ -889,41 +983,51 @@ li {
 		gap: 8px;
 		margin-bottom: 10px;
 	}
+
 	.section-skills button,
 	.section-skills .lvl {
 		width: 100% !important;
 		box-sizing: border-box;
 	}
+
 	.skills-header {
 		margin-bottom: 24px;
 	}
+
 	.skill-list {
 		font-size: 14px;
 	}
+
 	.skill-list dd {
 		margin-bottom: 12px !important;
 	}
+
 	dt {
 		margin-bottom: 9px !important;
 	}
+
 	.contact-list {
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 10px;
 		margin-bottom: 6px;
 	}
+
 	.contact-link_phone {
 		white-space: nowrap;
 		position: relative;
 		top: 2px;
 	}
+
 	.contact-link_mail {
 		position: relative;
 		top: -3px;
 	}
+
 	.contact-link {
 		font-size: 13px;
 	}
+
 	.social {
 		display: flex;
 		flex-wrap: wrap;
@@ -933,6 +1037,7 @@ li {
 		gap: 5px;
 		row-gap: 14px;
 	}
+
 	.social-link {
 		margin-bottom: 1px;
 	}
@@ -940,4 +1045,59 @@ li {
 	.section-contacts {
 		margin-bottom: 48px;
 	}
+}
+
+.switch {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 60px;
+	height: 34px;
+}
+
+.switch-checkbox {
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+
+.switch-slider {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 34px;
+	background-color: #CCCCCC;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.switch-slider:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	bottom: 0;
+	height: 40px;
+	width: 40px;
+	margin: auto 0;
+	border: 1px solid #CCCCCC;
+	border-radius: 50%;
+	background-color: #FFFFFF;
+	background-image: url('../img/dark-theme/moon.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 24px;
+	transition: 0.4s;
+}
+
+.switch-checkbox:checked+.switch-slider:before {
+	transform: translateX(24px);
+	background-color: #FFFFFF;
+	background-image: url('../img/dark-theme/sun.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 24px;
 }

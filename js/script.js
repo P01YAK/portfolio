@@ -6,7 +6,7 @@ const skills = {
 			icon: "html.svg"
 		},
 		{
-			name: "css", 
+			name: "css",
 			level: 70,
 			icon: "css.svg"
 		},
@@ -31,20 +31,20 @@ const skills = {
 			const dd = document.createElement('dd');
 			const skillLevel = document.createElement('div');
 			const progressBar = document.createElement('div');
-			
+
 			// классы
 			dt.classList.add('skill-item');
 			skillLevel.classList.add('skill-level');
-			
+
 			dt.textContent = skill.name;
 			progressBar.textContent = `${skill.level}%`;
 			progressBar.style.width = `${skill.level}%`;
 			dt.style.backgroundImage = `url('./img/${skill.icon}')`;
-			
+
 			// элементы
 			skillLevel.appendChild(progressBar);
 			dd.appendChild(skillLevel);
-			
+
 			// добавил на страницу
 			parentElement.appendChild(dt);
 			parentElement.appendChild(dd);
@@ -78,23 +78,23 @@ skills.generateList(skillList);
 
 // обработчик клика
 const sortBtnsBlock = document.querySelector('.skills-sort');
-	if (sortBtnsBlock) {
-		sortBtnsBlock.addEventListener('click', (e) => {
-			if (e.target && e.target.nodeName === 'BUTTON') {
-				let target = e.target;
-				switch (target.dataset.type) {
-					case 'name':
-						skills.sortList('name');
-						break;
-					case 'level':
-						skills.sortList('level');
-						break;
-					default:
-						console.log('неизвестная кнопка');
-				}
+if (sortBtnsBlock) {
+	sortBtnsBlock.addEventListener('click', (e) => {
+		if (e.target && e.target.nodeName === 'BUTTON') {
+			let target = e.target;
+			switch (target.dataset.type) {
+				case 'name':
+					skills.sortList('name');
+					break;
+				case 'level':
+					skills.sortList('level');
+					break;
+				default:
+					console.log('неизвестная кнопка');
 			}
-		})
-	}
+		}
+	})
+}
 
 function getComparer(prop) {
 	return function (a, b) {
@@ -116,30 +116,56 @@ console.log('mainNav:', mainNav);
 console.log('navBtn:', navBtn);
 
 if (mainNav && navBtn) {
-  const menu = {
-    open() {
-      mainNav.classList.remove('main-nav_closed');
-      navBtn.classList.remove('nav-btn_open');
-      navBtn.classList.add('nav-btn_close');
-      navBtn.innerHTML = '<span class="visually-hidden">Закрыть меню</span>';
-    },
-    close() {
-      mainNav.classList.add('main-nav_closed');
-      navBtn.classList.remove('nav-btn_close');
-      navBtn.classList.add('nav-btn_open');
-      navBtn.innerHTML = '<span class="visually-hidden">Открыть меню</span>';
-    }
-  };
+	const menu = {
+		open() {
+			mainNav.classList.remove('main-nav_closed');
+			navBtn.classList.remove('nav-btn_open');
+			navBtn.classList.add('nav-btn_close');
+			navBtn.innerHTML = '<span class="visually-hidden">Закрыть меню</span>';
+		},
+		close() {
+			mainNav.classList.add('main-nav_closed');
+			navBtn.classList.remove('nav-btn_close');
+			navBtn.classList.add('nav-btn_open');
+			navBtn.innerHTML = '<span class="visually-hidden">Открыть меню</span>';
+		}
+	};
 
-  menu.close();
+	menu.close();
 
-  navBtn.addEventListener('click', (e) => {
-    const btn = e.currentTarget;
-    if (btn && btn.classList.contains('nav-btn_open')) {
-      menu.open();
-    } else {
-      menu.close();
-    }
-    console.log('Меню открыто:', !mainNav.classList.contains('main-nav_closed'));
-  });
+	navBtn.addEventListener('click', (e) => {
+		const btn = e.currentTarget;
+		if (btn && btn.classList.contains('nav-btn_open')) {
+			menu.open();
+		} else {
+			menu.close();
+		}
+		console.log('Меню открыто:', !mainNav.classList.contains('main-nav_closed'));
+	});
+}
+
+
+// переключатель темы
+const checkbox = document.querySelector('.switch-checkbox');
+
+if (checkbox) {
+	// Проверка localStorage при загрузке
+	if (localStorage.getItem('theme') === 'light') {
+		document.body.classList.remove('dark-theme');
+		checkbox.checked = true;
+	} else {
+		document.body.classList.add('dark-theme');
+		checkbox.checked = false;
+	}
+
+	// Обработчик изменения
+	checkbox.addEventListener('change', function () {
+		if (this.checked) {
+			document.body.classList.remove('dark-theme');
+			localStorage.setItem('theme', 'light');
+		} else {
+			document.body.classList.add('dark-theme');
+			localStorage.setItem('theme', 'dark');
+		}
+	});
 }
