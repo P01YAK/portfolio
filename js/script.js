@@ -1,26 +1,9 @@
+const skillsSection = document.querySelector('.section-skills');
+const skillList = skillsSection ? skillsSection.querySelector('dl.skill-list') : null;
+const sortBtnsBlock = skillsSection ? skillsSection.querySelector('.skills-sort') : null;
+
 const skills = {
-	data: [
-		{
-			name: "html",
-			level: 60,
-			icon: "html.svg"
-		},
-		{
-			name: "css",
-			level: 70,
-			icon: "css.svg"
-		},
-		{
-			name: "python",
-			level: 80,
-			icon: "python.svg"
-		},
-		{
-			name: "c++",
-			level: 55,
-			icon: "cpp.svg"
-		}
-	],
+	data: [],
 
 	generateList(parentElement) {
 		// очистка контейнера
@@ -53,6 +36,32 @@ const skills = {
 
 	sortMode: null,
 
+	getData(pathToJSON) {
+		if (skillsSection) {
+			skillsSection.classList.remove('section-skills_hidden');
+		}
+		fetch(pathToJSON)
+			.then(data => data.json())
+			.then(object => {
+				this.data = object;
+				if (!this.data.length) {
+					if (skillsSection) {
+						skillsSection.classList.add('section-skills_hidden');
+					}
+					return;
+				}
+				if (skillList) {
+					this.generateList(skillList);
+				}
+			})
+			.catch(() => {
+				console.error('что-то пошло не так');
+				if (skillsSection) {
+					skillsSection.classList.add('section-skills_hidden');
+				}
+			});
+	},
+
 	sortList(type) {
 		const prop = type === 'level' ? 'level' : 'name';
 		if (this.sortMode !== type) {
@@ -61,11 +70,9 @@ const skills = {
 			} else {
 				this.data.sort(getComparer(prop));
 			}
-			console.log(type === 'name' ? 'отсортировали данные по имени' : 'отсортировали данные по уровню');
 			this.sortMode = type;
 		} else {
 			this.data.reverse();
-			console.log('инвертировали порядок сортировки');
 		}
 		if (skillList) {
 			this.generateList(skillList);
@@ -73,11 +80,9 @@ const skills = {
 	}
 }
 
-const skillList = document.querySelector('dl.skill-list');
-skills.generateList(skillList);
+skills.getData('db/skills.json');
 
 // обработчик клика
-const sortBtnsBlock = document.querySelector('.skills-sort');
 if (sortBtnsBlock) {
 	sortBtnsBlock.addEventListener('click', (e) => {
 		if (e.target && e.target.nodeName === 'BUTTON') {
@@ -90,7 +95,6 @@ if (sortBtnsBlock) {
 					skills.sortList('level');
 					break;
 				default:
-					console.log('неизвестная кнопка');
 			}
 		}
 	})
@@ -111,9 +115,6 @@ function getComparer(prop) {
 // меню
 const mainNav = document.querySelector('.main-nav');
 const navBtn = document.querySelector('.nav-btn');
-
-console.log('mainNav:', mainNav);
-console.log('navBtn:', navBtn);
 
 if (mainNav && navBtn) {
 	const menu = {
@@ -140,7 +141,6 @@ if (mainNav && navBtn) {
 		} else {
 			menu.close();
 		}
-		console.log('Меню открыто:', !mainNav.classList.contains('main-nav_closed'));
 	});
 }
 

@@ -272,6 +272,10 @@ a {
 	margin-top: 40px;
 }
 
+.section-skills_hidden {
+	display: none;
+}
+
 .social li {
 	display: inline-block;
 	margin: 0 8px;
