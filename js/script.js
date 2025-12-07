@@ -37,9 +37,6 @@ const skills = {
 	sortMode: null,
 
 	getData(pathToJSON) {
-		if (skillsSection) {
-			skillsSection.classList.remove('section-skills_hidden');
-		}
 		fetch(pathToJSON)
 			.then(data => data.json())
 			.then(object => {
@@ -50,7 +47,8 @@ const skills = {
 					}
 					return;
 				}
-				if (skillList) {
+				if (skillList && skillsSection) {
+					skillsSection.classList.remove('section-skills_hidden');
 					this.generateList(skillList);
 				}
 			})
